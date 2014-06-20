@@ -1,0 +1,161 @@
+<robot
+  name="schunkPG70_description">
+  <link
+    name="tool_frame">
+    <inertial>
+      <origin
+        xyz="0.0437 -0.00028639 1.2264E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.77467" />
+      <inertia
+        ixx="0.0012487"
+        ixy="2.8077E-06"
+        ixz="3.6225E-08"
+        iyy="0.00092687"
+        iyz="-2.0146E-07"
+        izz="0.0013271" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/tool_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/tool_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gripper_a_frame">
+    <inertial>
+      <origin
+        xyz="-0.0088936 -0.00986 0.0094452"
+        rpy="0 0 0" />
+      <mass
+        value="0.014276" />
+      <inertia
+        ixx="1.4595E-06"
+        ixy="4.4438E-07"
+        ixz="-3.9514E-07"
+        iyy="3.241E-06"
+        iyz="-2.8393E-07"
+        izz="2.7578E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/gripper_a_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12157 0.12157 0.12157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/gripper_a_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_a"
+    type="prismatic">
+    <origin
+      xyz="0.0985 -0.0323 -0.00025"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="tool_frame" />
+    <child
+      link="gripper_a_frame" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.032"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_b_frame">
+    <inertial>
+      <origin
+        xyz="0.0088936 -0.00986 -0.0094452"
+        rpy="0 0 0" />
+      <mass
+        value="0.014276" />
+      <inertia
+        ixx="1.4595E-06"
+        ixy="-4.4438E-07"
+        ixz="-3.9514E-07"
+        iyy="3.241E-06"
+        iyz="2.8393E-07"
+        izz="2.7578E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/gripper_b_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12157 0.12157 0.12157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunkPG70_description/meshes/gripper_b_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_b"
+    type="prismatic">
+    <origin
+      xyz="0.0985 0.0323 0.00025"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="tool_frame" />
+    <child
+      link="gripper_b_frame" />
+    <axis
+      xyz="1 0 0" />
+    <mimic
+      joint="gripper_a" />
+    <limit
+      lower="0"
+      upper="0.032"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

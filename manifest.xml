@@ -1,0 +1,6 @@
+<package>
+  <description brief="schunkPG70_description">schunkPG70_description</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>
