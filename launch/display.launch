@@ -1,12 +1,10 @@
 <launch>
   <arg
-    name="model" />
-  <arg
     name="gui"
-    default="False" />
+    default="True" />
   <param
     name="robot_description"
-    textfile="$(find schunkPG70_description)/robots/schunkPG70_description.URDF" />
+    textfile="$(find schunk_pg70_description)/robots/schunk_pg70_description.URDF" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +20,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find schunkPG70_description)/urdf.rviz" />
+    args="-d $(find schunk_pg70_description)/urdf.rviz" />
 </launch>

@@ -1,5 +1,5 @@
 <robot
-  name="schunkPG70_description">
+  name="schunk_pg70_description">
   <link
     name="tool_frame">
     <inertial>
@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/tool_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/tool_frame.STL" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/tool_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/tool_frame.STL" />
       </geometry>
     </collision>
   </link>
@@ -62,7 +62,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/gripper_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/gripper_frame.STL" />
       </geometry>
       <material
         name="">
@@ -76,7 +76,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/gripper_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/gripper_frame.STL" />
       </geometry>
     </collision>
   </link>
@@ -120,7 +120,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/gripper_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/gripper_frame.STL" />
       </geometry>
       <material
         name="">
@@ -134,7 +134,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://schunkPG70_description/meshes/gripper_frame.STL" />
+          filename="package://schunk_pg70_description/meshes/gripper_frame.STL" />
       </geometry>
     </collision>
   </link>
